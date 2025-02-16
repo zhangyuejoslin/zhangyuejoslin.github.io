@@ -60,6 +60,35 @@
           </tbody></table> -->
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+            <!-- JavaScript Function for Image Resizing -->
+            <script>
+              function adjustImageSizes() {
+                  let images = [
+                      { id: "m2f2_img", mobileWidth: 170, pcWidth: 300 },
+                      { id: "lpgn_img", mobileWidth: 160, pcWidth: 300 },
+                      { id: "mmdet_img", mobileWidth: 160, pcWidth: 300 },
+                      { id: "hifinet_img", mobileWidth: 160, pcWidth: 220 },
+                      { id: "ddvqa_img", mobileWidth: 160, pcWidth: 300 },
+                      { id: "denseface_img", mobileWidth: 160, pcWidth: 300 },
+                      { id: "hifinet_img_v2", mobileWidth: 160, pcWidth: 220 },
+                      { id: "mdfas_image", mobileWidth: 150, pcWidth: 280 },
+                      { id: "RE_image", mobileWidth: 150, pcWidth: 250 },
+                      { id: "motion_prediction_image", mobileWidth: 150, pcWidth: 250 },
+                  ];
+
+                  images.forEach(imgData => {
+                      let img = document.getElementById(imgData.id);
+                      if (img) {  // Ensure the image exists before modifying
+                          img.width = window.innerWidth <= 768 ? imgData.mobileWidth : imgData.pcWidth;
+                      }
+                  });
+              }
+
+              // Run function on page load and on resize
+              window.onload = adjustImageSizes;
+              window.onresize = adjustImageSizes;
+            </script>
+
             <h2>Selected Publications</h2>
 
             <!-- <tr onmouseout="r2r_stop()" onmouseover="r2r_start()" bgcolor="#ffffd0">
@@ -92,12 +121,12 @@
             <tr bgcolor="#ffffd0">
               <td width="40%" valign="middle" align="left">
                 <div class="one">
-                  <img src='images/M2F2_Det.png' width="250" height="125">
+                  <img id="m2f2_img" src='images/M2F2_Det.png' width="200">
                 </div>
               </td>
               <td width="60%" valign="middle">
                 <!-- Nested table to ensure responsiveness -->
-                <table width="100%" border="0">
+                <table width="100%">
                   <tr>
                     <td>
                       <a href="https://m2f2-net.github.io/M2F2-Page/">
@@ -126,9 +155,14 @@
             </tr>
 
             <tr onmouseout="bog_stop()" onmouseover="bog_start()">
-              <td style="padding:4px;padding-top:2px;width:40%;vertical-align:middle">
+              <!-- <td style="padding:4px;padding-top:2px;width:40%;vertical-align:middle">
                 <div class="one">
                   <img src='images/LPGN.png' width=275 height=120>
+                </div>
+              </td> -->
+              <td width="40%" valign="middle" align="left">
+                <div class="one">
+                  <img id="lpgn_img" src='images/LPGN.png' width="200">
                 </div>
               </td>
               <td style="padding:0px;width:100%;vertical-align:middle">
@@ -156,7 +190,7 @@
             <tr onmouseout="bog_stop()" onmouseover="bog_start()">
               <td style="padding:4px;width:40%;vertical-align:middle">
                 <div class="one">
-                  <img src='images/MM-Det.png' width=275 height=150>
+                  <img id="mmdet_img" src='images/MM-Det.png' width="200">
                 </div>
               </td>
               <td style="padding:0px;width:100%;vertical-align:middle">
@@ -184,9 +218,9 @@
             </tr>
         
             <tr onmouseout="bog_stop()" onmouseover="bog_start()">
-              <td style="padding-left:20px;width:40%;vertical-align:middle;text-align:center;">
+              <td style="padding-left:0px;width:40%;vertical-align:middle;text-align:left;">
                 <div class="one">
-                  <img src='images/HiFi_Net.png' width=220 height=150>
+                  <img id="hifinet_img" src='images/HiFi_Net.png'>
                 </div>
               </td>
               <td style="padding:0px;width:100%;vertical-align:middle">
@@ -212,9 +246,9 @@
             </tr>
 
             <tr onmouseout="bog_stop()" onmouseover="bog_start()">
-              <td style="padding:18px;width:40%;vertical-align:middle">
+              <td style="padding:0px;width:40%;vertical-align:middle">
                 <div class="one">
-                  <img src='images/DDVQA-BLIP.gif' width=250 height=150>
+                  <img id='ddvqa_img' src='images/DDVQA-BLIP.gif'>
                 </div>
               </td>
               <td style="padding:0px;width:100%;vertical-align:middle">
@@ -241,9 +275,9 @@
             </tr>
 
             <tr onmouseout="bog_stop()" onmouseover="bog_start()", bgcolor="#ffffd0">
-              <td style="padding-left:28px;width:40%;vertical-align:middle;text-align:center;">
+              <td style="padding-left:0px;width:40%;vertical-align:middle;text-align:center;">
                 <div class="one">
-                  <img src='images/Dense-Face.png' width=250 height=150>
+                  <img id='denseface_img' src='images/Dense-Face.png' width=250 height=150>
                 </div>
               </td>
               <td style="padding:0px;width:100%;vertical-align:middle">
@@ -271,9 +305,9 @@
             </tr>
 
             <tr onmouseout="bog_stop()" onmouseover="bog_start()", bgcolor="#ffffd0">
-              <td style="padding-left:32px;width:40%;vertical-align:middle;text-align:center;">
+              <td style="padding-left:0px;width:40%;vertical-align:middle;text-align:center;">
                 <div class="one">
-                  <img src='images/HiFi_Net.png' width=220 height=150>
+                  <img id="hifinet_img_v2" src='images/HiFi_Net.png' width=220>
                 </div>
               </td>
               <td style="padding:0px;width:100%;vertical-align:middle">
@@ -301,9 +335,9 @@
             </tr>
 
             <tr onmouseout="bog_stop()" onmouseover="bog_start()">
-              <td style="padding-left:32px;width:40%;vertical-align:middle;text-align:center;">
+              <td style="padding-left:0px;width:40%;vertical-align:middle;text-align:center;">
                 <div class="one">
-                  <img src='images/MDFAS.gif' width=220 height=150>
+                  <img id="mdfas_image" src='images/MDFAS.gif' width=220 height=150>
                 </div>
               </td>
               <td style="padding:0px;width:100%;vertical-align:middle">
@@ -328,12 +362,12 @@
             </tr>
 
             <tr>
-              <td style="padding-left:32px;width:40%;vertical-align:middle;text-align:center;">
+              <td style="padding-left:0px;width:40%;vertical-align:bottom;text-align:center;">
                 <div class="one">
-                  <img src='images/Relation_extraction.png' width=220 height=150>
+                  <img id='RE_image' src='images/Relation_extraction.png'>
                 </div>
               </td>
-              <td style="padding:0px;width:100%;vertical-align:middle">
+              <td style="padding:0px;width:100%;vertical-align:top">
                 <a href="https://arxiv.org/pdf/2101.00124">
                   <span class="papertitle">Discourse-level Relation Extraction via Graph Pooling</span>
                 </a>
@@ -349,12 +383,12 @@
             </tr>
 
             <tr>
-              <td style="padding-left:24px;width:40%;vertical-align:middle;text-align:center;">
+              <td style="padding-left:0px;width:40%;vertical-align:middle;text-align:center;">
                 <div class="one">
-                  <img src='images/Human_motion.png' width=250 height=120>
+                  <img id="motion_prediction_image" src='images/Human_motion.png'>
                 </div>
               </td>
-              <td style="padding:0px;width:100%;vertical-align:middle">
+              <td style="padding:0px;width:100%;vertical-align:top">
                 <a href="https://arxiv.org/abs/1902.07367">
                   <span class="papertitle">Human motion prediction via learning local structure representations and temporal dependencies</span>
                 </a>
