@@ -115,6 +115,17 @@ h2 {
   position: relative;
 }
 
+.one1 {
+  width: 160px;
+  height: 190px;
+  position: relative;
+}
+
+.joslinimg {
+    max-width: 10%;  /* Ensures images don’t overflow */
+    height: auto;      /* Maintains aspect ratio */
+}
+
 .two {
   width: 160px;
   height: 160px;
