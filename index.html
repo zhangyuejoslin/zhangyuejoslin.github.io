@@ -2,168 +2,94 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
     <title>Yue Zhang</title>
-
     <meta name="author" content="Yue Zhang">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
+
+    <!-- Global Styles -->
+    <style>
+        /* Ensure images are responsive */
+        .publication-img {
+            max-width: 80%;
+            height: auto;
+            display: block;
+            margin-bottom: 15px
+        }
+
+        /* Spacing between publications */
+        .publication {
+            padding-bottom: 100px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .publication-img {
+                width: 80%;
+                max-width: 400px;
+            }
+        }
+    </style>
   </head>
 
   <body>
-      <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Yue Zhang
-                </p>
-                 <p>Hello! I am a Ph.D. at Michigan State University, supervised by <a href="https://www.cse.msu.edu/~kordjams/">Prof. Parisa Kordjamshidi</a>. I was a visiting scholar at Virginia Tech, working with <a href="https://wilburone.github.io/index.html">Prof. Lifu Huang</a>. Prior to that, I obtained my master degree from Peking University. My
-              <b>research interests</b> include multimodal learning, embodied agent, and spatial reasoning.</p>
-                </p>
-                <p style="text-align:center">
-                  <a href="mailto:zhan1624@msu.edu">Email</a> &nbsp;/&nbsp;
-                  <a href="https://drive.google.com/file/d/1WM4fdTYuEKZEVnlugPHpj7IZ7yzfgUti/view?usp=sharing">CV</a> &nbsp;/&nbsp;
-                  <a href="https://scholar.google.com/citations?user=moNpjqMAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/zhangyuejoslin">Github</a> &nbsp;/&nbsp;
-                  <a href="www.linkedin.com/in/zhangjoslin">Linkedin</a>
-                </p>
-              </td>
-              <td style="padding:1.5%;width:70%;max-width:70%">
-                <img style="width:70%;max-width:70%;object-fit: cover; border-radius: 60%;" axlt="profile photo" src="images/person.jpg" class="hoverZoomLink"></a>
-              </td>
-              </tr>
-            </tbody>
-      </table>
-          <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Research Interests</h2>
-                <p>
-                  I'm interested in computer vision, deep learning, generative AI, and image processing. Most of my research is about inferring the physical world (shape, motion, color, light, etc) from images, usually with radiance fields. Some papers are <span class="highlight">highlighted</span>.
-                </p>
-              </td>
-            </tr>
-          </tbody></table> -->
-           <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                 <h2>News</h2>
-                <td style="padding:10px;width:10%;vertical-align:middle">
-                 <!--  <heading>News</heading> -->
-                   <p>
-                <li> [2025.2] One paper got accepted by CVPR 2025!</li>
-                <li> [2025.2] Passed the Ph.D. dissertation defense!</li>
-                <li> [2025.1] One paper got accepted by ICLR 2025!</li>
-                <li> [2024.11] Our VLN survey got accepted by TMLR!</li>
-                <li> [2024.7] One paper got accepted by ECCV 2024!</li>
-              </p>
-<!--                   <p>
-                    [Jul. 2023] Two papers are accepted by ICCV 2023.
-                  </p>
-                  <p>
-                    [Dec. 2022] One paper is accepted by TPAMI.
-                  </p>
-                  <p>
-                    [Mar. 2022] One paper is accepted by CVPR 2022.
-                  </p> -->
-
-
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-            <!-- JavaScript Function for Image Resizing -->
-            <script>
-              function adjustImageSizes() {
-                  let images = [
-                      { id: "m2f2_img", mobileWidth: 170, pcWidth: 270 },
-                      { id: "lpgn_img", mobileWidth: 160, pcWidth: 270 },
-                      { id: "mmdet_img", mobileWidth: 160, pcWidth: 270 },
-                      { id: "acmmm_img", mobileWidth: 180, pcWidth: 270 },
-                      { id: "ddvqa_img", mobileWidth: 140, pcWidth: 270 },
-                      { id: "denseface_img", mobileWidth: 160, pcWidth: 300 },
-                      { id: "hifinet_img_v2", mobileWidth: 160, pcWidth: 220 },
-                      { id: "mdfas_image", mobileWidth: 150, pcWidth: 280 },
-                      { id: "RE_image", mobileWidth: 150, pcWidth: 250 },
-                      { id: "motion_prediction_image", mobileWidth: 150, pcWidth: 250 },
-                  ];
-
-                  images.forEach(imgData => {
-                      let img = document.getElementById(imgData.id);
-                      if (img) {  // Ensure the image exists before modifying
-                          img.width = window.innerWidth <= 768 ? imgData.mobileWidth : imgData.pcWidth;
-                      }
-                  });
-              }
-
-              // Run function on page load and on resize
-              window.onload = adjustImageSizes;
-              window.onresize = adjustImageSizes;
-            </script>
-
-
-
-            <h2>Selected Publications</h2>
-
-            <!-- <tr onmouseout="r2r_stop()" onmouseover="r2r_start()" bgcolor="#ffffd0">
-              <td style="padding:4px;width:40%;vertical-align:middle">
-                  <img src='images/M2F2_Det.png' width=275 height=150>
-              </td>
-              <td width="60%" valign="middle" align="center">
-                <a href="https://m2f2-net.github.io/M2F2-Page/">
-                  <span class="papertitle">Rethinking Vision Language Model in Face Forensic: Multi-modal Interpretable Forged Face Detector</span>
-                </a>
-                <br>
-                <strong>Xiao Guo</strong>, 
-                <a href="https://scholar.google.com/citations?user=qO93EgIAAAAJ&hl=en">Xiufeng Song</a>,
-                <a href="https://www.egr.msu.edu/~zhan1624/">Yue Zhang</a>,
-                <a href="https://jhc.sjtu.edu.cn/~xiaohongliu/">Xiaohong Liu</a>, 
-                <a href="https://cvlab.cse.msu.edu/">Xiaoming Liu</a>
-                <br>
-                <em>CVPR submission</em>, 2025
-                <br>
-                <a href="https://m2f2-net.github.io/M2F2-Page/">project page</a>
-                /
-                <a href="https://drive.google.com/file/d/1Quem5CGy_Gb9gmUihRWVKsFzQUoS6hnI/view">preview</a>
-                <p></p>
-                <p>
-                A face forgery detection method that outputs both deepfake scores and textual descriptions.
-                </p>
-              </td>
-            </tr> -->
-
-            <tr onmouseout="bog_stop()" onmouseover="bog_start()">
-              <td width="40%" valign="middle" align="left">
-                <div class="one">
-                  <style>
-                        img {
-                            max-width: 150%;
-                            height: auto;
-                        }
-                      /*  @media screen and (max-width: 768px) {
-                            img {
-                                width: 200%;
-                                max-width: 800px;
-                            }
-                        }*/
-                    </style>
-                  <img id="mmdet_img" src='images/M2F2_Det.png'>
-                </div>
-              </td>
-              <td width="60%" valign="middle">
-                <!-- Nested table to ensure responsiveness -->
-                <table width="100%">
+      <table style="width:100%; max-width:800px; border:0px; border-spacing:0px; border-collapse:separate; margin:auto;">
+        <tbody>
+          <tr>
+            <td>
+              <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin:auto;">
+                <tbody>
                   <tr>
-                    <td>
+                    <td style="padding:2.5%; width:63%; vertical-align:middle">
+                      <p class="name" style="text-align: center;">Yue Zhang</p>
+                      <p>Hello! I am a Ph.D. at Michigan State University, supervised by <a href="https://www.cse.msu.edu/~kordjams/">Prof. Parisa Kordjamshidi</a>. I was a visiting scholar at Virginia Tech, working with <a href="https://wilburone.github.io/index.html">Prof. Lifu Huang</a>. Prior to that, I obtained my master’s degree from Peking University. My <b>research interests</b> include multimodal learning, embodied agents, and spatial reasoning.</p>
+                      <p style="text-align:center">
+                        <a href="mailto:zhan1624@msu.edu">Email</a> &nbsp;/&nbsp;
+                        <a href="https://drive.google.com/file/d/1WM4fdTYuEKZEVnlugPHpj7IZ7yzfgUti/view?usp=sharing">CV</a> &nbsp;/&nbsp;
+                        <a href="https://scholar.google.com/citations?user=moNpjqMAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
+                        <a href="https://github.com/zhangyuejoslin">Github</a> &nbsp;/&nbsp;
+                        <a href="https://www.linkedin.com/in/zhangjoslin/">LinkedIn</a>
+                      </p>
+                    </td>
+                    <td style="padding:1.5%; width:70%; max-width:70%;">
+                      <img style="width:70%; max-width:70%; object-fit:cover; border-radius: 60%;" alt="profile photo" src="images/person.jpg">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- News Section -->
+              <h2>News</h2>
+              <table style="width:100%; margin:auto;">
+                <tbody>
+                  <tr>
+                    <td style="padding:10px; width:100%; vertical-align:middle">
+                      <ul>
+                        <li>[2025.2] One paper got accepted by CVPR 2025!</li>
+                        <li>[2025.2] Passed the Ph.D. dissertation defense!</li>
+                        <li>[2025.1] One paper got accepted by ICLR 2025!</li>
+                        <li>[2024.11] Our VLN survey got accepted by TMLR!</li>
+                        <li>[2024.7] One paper got accepted by ECCV 2024!</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- Publications Section -->
+              <h2>Selected Publications</h2>
+              <table style="width:100%; margin:auto;">
+                <tbody>
+                  <!-- Publication 1 -->
+                  <tr class="publication">
+                    <td width="40%" valign="middle">
+                      <img class="publication-img" src="images/M2F2_Det.png">
+                    </td>
+                    <td width="60%" valign="middle">
                       <a href="https://m2f2-net.github.io/M2F2-Page/">
                         <span class="papertitle">Rethinking Vision Language Model in Face Forensic: Multi-modal Interpretable Forged Face Detector</span>
                       </a>
@@ -176,481 +102,201 @@
                       <br>
                       <em>CVPR</em>, 2025
                       <br>
-                      <a href="https://m2f2-net.github.io/M2F2-Page/">project page</a>
-                      <p></p>
+                      <a href="https://m2f2-net.github.io/M2F2-Page/">Project Page</a>
                     </td>
                   </tr>
-                </table>
-              </td>
-            </tr>
 
-            <tr onmouseout="bog_stop()" onmouseover="bog_start()">
-              <td width="40%" valign="middle" align="left">
-                <div class="one">
-                  <style>
-                        img {
-                            max-width: 150%;
-                            height: auto;
-                        }
-                      /*  @media screen and (max-width: 768px) {
-                            img {
-                                width: 200%;
-                                max-width: 800px;
-                            }
-                        }*/
-                    </style>
-                  <img id="mmdet_img" src='images/vln-survey.jpg'>
-                </div>
-              </td>
-              <td width="60%" valign="middle">
-                <!-- Nested table to ensure responsiveness -->
-                <table width="100%">
-                  <tr>
-                    <td>
-                      <a href="https://m2f2-net.github.io/M2F2-Page/">
-                        <span class="papertitle">Rethinking Vision Language Model in Face Forensic: Multi-modal Interpretable Forged Face Detector</span>
+                  <!-- Publication 2 -->
+
+                  <tr class="publication">
+                    <td width="40%" valign="middle">
+                      <img class="publication-img" src="images/spartun3d.jpg">
+                    </td>
+                    <td width="60%" valign="middle">
+                      <a href="https://arxiv.org/pdf/2410.03878">
+                        <span class="papertitle">SPARTUN3D: Situated Spatial Understanding of 3D World in Large Language Models</span>
                       </a>
                       <br>
-                      <a href="https://chelsea234.github.io/website/">Xiao Guo</a>,
-                      <a href="https://scholar.google.com/citations?user=qO93EgIAAAAJ&hl=en">Xiufeng Song</a>,
-                      <stong>Yue Zhang</strong>,
-                      <a href="https://jhc.sjtu.edu.cn/~xiaohongliu/">Xiaohong Liu</a>, 
-                      <a href="https://cvlab.cse.msu.edu/">Xiaoming Liu</a>
+                      <strong>Yue Zhang</strong>, 
+                      <a href="https://scholar.google.com/citations?user=Qcshi8UAAAAJ&hl=en">Zhiyang Xu</a>,
+                      <a href="https://yingshen-ys.github.io/">Ying Shen</a>, 
+                      <a href="https://www.cse.msu.edu/~kordjams/">Parisa Kordjamshidi</a>,
+                      <a href="https://wilburone.github.io/">Lifu Huang</a>
                       <br>
-                      <em>CVPR</em>, 2025
+                      <em>ICLR</em>, 2025
                       <br>
-                      <a href="https://m2f2-net.github.io/M2F2-Page/">project page</a>
-                      <p></p>
+                      <a href="https://github.com/zhangyuejoslin/Spartun3D">Code</a> /
+                      <a href="https://arxiv.org/pdf/2410.03878">ArXiv</a>
                     </td>
                   </tr>
-                </table>
-              </td>
-            </tr>
 
-
-
-             <tr onmouseout="bog_stop()" onmouseover="bog_start()">
-              <td width="40%" valign="middle" align="left">
-                <div class="one">
-                  <style>
-                        img {
-                            max-width: 150%;
-                            height: auto;
-                        }
-                      /*  @media screen and (max-width: 768px) {
-                            img {
-                                width: 200%;
-                                max-width: 800px;
-                            }
-                        }*/
-                    </style>
-                  <img id="mmdet_img" src='images/vln-survey.jpg'>
-                </div>
-              </td>
-              <td width="60%" valign="middle">
-                <!-- Nested table to ensure responsiveness -->
-                <table width="100%">
-                  <tr>
-                    <td>
-                      <a href="https://m2f2-net.github.io/M2F2-Page/">
-                        <span class="papertitle">Rethinking Vision Language Model in Face Forensic: Multi-modal Interpretable Forged Face Detector</span>
+                  <tr class="publication">
+                    <td width="40%" valign="middle">
+                      <img class="publication-img" src="images/vln-survey.jpg">
+                    </td>
+                    <td width="60%" valign="middle">
+                      <a href="https://arxiv.org/abs/2407.07035">
+                        <span class="papertitle">Vision-and-Language Navigation Today and Tomorrow: A Survey in the Era of Foundation Models</span>
                       </a>
                       <br>
-                      <a href="https://chelsea234.github.io/website/">Xiao Guo</a>,
-                      <a href="https://scholar.google.com/citations?user=qO93EgIAAAAJ&hl=en">Xiufeng Song</a>,
-                      <stong>Yue Zhang</strong>,
-                      <a href="https://jhc.sjtu.edu.cn/~xiaohongliu/">Xiaohong Liu</a>, 
-                      <a href="https://cvlab.cse.msu.edu/">Xiaoming Liu</a>
+                      <strong>Yue Zhang</strong>, 
+                      <a href="https://mars-tin.github.io/">Ziqiao Ma</a>,
+                      <a href="https://jialuli-luka.github.io/">Jialu Li</a>, 
+                      <a href="https://yanyuanqiao.github.io/">Yanyuan Qiao</a>, 
+                      <a href="https://zunwang1.github.io/">Zun Wang</a>, 
+                      <a href="https://web.eecs.umich.edu/~chaijy/">Joyce Chai</a>, 
+                      <a href="http://qi-wu.me/">Qi Wu</a>, 
+                      <a href="https://www.cs.unc.edu/~mbansal/">Mohit Bansal</a>, 
+                      <a href="https://www.cse.msu.edu/~kordjams/">Parisa Kordjamshidi</a>
                       <br>
-                      <em>CVPR</em>, 2025
+                      <em>TMLR</em>, 2024
                       <br>
-                      <a href="https://m2f2-net.github.io/M2F2-Page/">project page</a>
-                      <p></p>
+                      <a href="https://github.com/zhangyuejoslin/VLN-Survey-with-Foundation-Models">Code</a> /
+                      <a href="https://arxiv.org/abs/2407.07035">ArXiv</a>
                     </td>
                   </tr>
-                </table>
-              </td>
-            </tr>
 
-
-
-            <tr onmouseout="bog_stop()" onmouseover="bog_start()">
-              <td width="40%" valign="middle" align="left">
-                <div class="one">
-                  <style>
-                        img {
-                            max-width: 150%;
-                            height: auto;
-                        }
-                      /*  @media screen and (max-width: 768px) {
-                            img {
-                                width: 200%;
-                                max-width: 800px;
-                            }
-                        }*/
-                    </style>
-                  <img id="mmdet_img" src='images/vln-survey.jpg'>
-                </div>
-              </td>
-              <td width="60%" valign="middle">
-                <!-- Nested table to ensure responsiveness -->
-                <table width="100%">
-                  <tr>
-                   <!-- <td style="padding:0px;width:100%;vertical-align:middle"> -->
-                <a href="https://arxiv.org/abs/2407.07035">
-                  <span class="papertitle">Vision-and-Language Navigation Today and Tomorrow: A Survey in the Era of Foundation Models</span>
-                </a>
-                <br>
-                  <strong>Yue Zhang</strong>, 
-                  <a href="https://mars-tin.github.io/">Ziqiao Ma</a>
-                  <a href="https://jialuli-luka.github.io/">Jialu Li</a>, 
-                  <a href="https://yanyuanqiao.github.io/">Yanyuan Qiao</a>, 
-                  <a href="https://zunwang1.github.io/">Zun Wang</a>, 
-                  <a href="https://web.eecs.umich.edu/~chaijy/">Joyce Chai</a>, 
-                  <a href="http://qi-wu.me/">Qi Wu</a>, 
-                  <a href="https://www.cs.unc.edu/~mbansal/">Mohit Bansal</a>, 
-                  <a href="https://www.cse.msu.edu/~kordjams/">Parisa Kordjamshidi</a>
-                <br>
-                <em>TMLR</em>, 2024
-                <br>
-                <a href="https://github.com/zhangyuejoslin/VLN-Survey-with-Foundation-Models">code</a>
-                /
-                <a href="https://arxiv.org/abs/2407.07035">arXiv</a>
-              </td>
+                  <tr class="publication">
+                    <td width="40%" valign="middle">
+                      <img class="publication-img" src="images/common-sense.png">
+                    </td>
+                    <td width="60%" valign="middle">
+                      <a href="https://arxiv.org/pdf/2402.00126">
+                        <span class="papertitle">Common Sense Reasoning for Deepfake Detection</span>
+                      </a>
+                      <br>
+                      <strong>Yue Zhang</strong>, Ben Colman, 
+                      <a href="https://chelsea234.github.io/website/">Xiao Guo</a>, Ali Shahriyari, 
+                      <a href="https://gauravbharaj.github.io/">Gaurav Bharaj</a>
+                      <br>
+                      <em>ECCV</em>, 2024
+                      <br>
+                      <a href="https://github.com/Reality-Defender/Research-DD-VQA">Code</a> /
+                      <a href="https://arxiv.org/pdf/2402.00126">ArXiv</a>
+                    </td>
                   </tr>
-                </table>
-              </td>
-            </tr>
 
-
-
-
-            <tr onmouseout="bog_stop()" onmouseover="bog_start()">
-              <td width="40%" valign="middle" align="left">
-                <div class="one">
-                  <style>
-                        img {
-                            max-width: 150%;
-                            height: auto;
-                        }
-                      /*  @media screen and (max-width: 768px) {
-                            img {
-                                width: 200%;
-                                max-width: 800px;
-                            }
-                        }*/
-                    </style>
-                  <img id="mmdet_img" src='images/acmmm.png'>
-                </div>
-              </td>
-              <td width="60%" valign="middle">
-                <!-- Nested table to ensure responsiveness -->
-                <table width="100%">
-                  <tr>
-                   <!-- <td style="padding:0px;width:100%;vertical-align:middle"> -->
-                <a href="https://dl.acm.org/doi/pdf/10.1145/3664647.3681150">
-                  <span class="papertitle">Narrowing the Gap between Vision and Action in Navigation</span>
-                </a>
-                <br>
-                  <strong>Yue Zhang</strong>,  
-                  <a href="https://www.cse.msu.edu/~kordjams/">Parisa Kordjamshidi</a>
-                <br>
-                <em>ACM MM</em>, 2024
-                <br>
-                <a href="https://github.com/HLR/Dual-Action-VLN-CE">code</a>
-                /
-                <a href="https://dl.acm.org/doi/pdf/10.1145/3664647.3681150">arXiv</a>
-              </td>
+                  <tr class="publication">
+                    <td width="40%" valign="middle">
+                      <img class="publication-img" src="images/navhint.png">
+                    </td>
+                    <td width="60%" valign="middle">
+                      <a href="https://arxiv.org/pdf/2402.02559.pdf">
+                        <span class="papertitle">NavHint: Vision and Language Navigation Agent with a Hint Generator</span>
+                      </a>
+                      <br>
+                      <strong>Yue Zhang</strong>, 
+                      <a href="https://guoquan.net/">Quan Guo</a>, 
+                      <a href="https://www.cse.msu.edu/~kordjams/">Parisa Kordjamshidi</a>
+                      <br>
+                      <em>EACL Findings</em>, 2024
+                      <br>
+                      <a href="https://github.com/HLR/NavHint">Code</a> /
+                      <a href="https://arxiv.org/pdf/2402.02559.pdf">ArXiv</a>
+                    </td>
                   </tr>
-                </table>
-              </td>
-            </tr>
 
-
-
-
-            <tr onmouseout="bog_stop()" onmouseover="bog_start()">
-              <td width="40%" valign="middle" align="left">
-                <div class="one">
-                  <style>
-                        img {
-                            max-width: 150%;
-                            height: auto;
-                        }
-                      /*  @media screen and (max-width: 768px) {
-                            img {
-                                width: 200%;
-                                max-width: 800px;
-                            }
-                        }*/
-                    </style>
-                  <img id="mmdet_img" src='images/common-sense.png'>
-                </div>
-              </td>
-              <td width="60%" valign="middle">
-                <!-- Nested table to ensure responsiveness -->
-                <table width="100%">
-                  <tr>
-                   <td style="padding:0px;width:100%;vertical-align:middle">
-               <a href="https://arxiv.org/pdf/2402.00126">
-                  <span class="papertitle">Common Sense Reasoning for Deepfake Detection</span>
-                </a>
-                <br>
-                  <strong>Yue Zhang</strong>,
-                  Ben Colman, 
-                  <a href="https://chelsea234.github.io/website/">Xiao Guo</a>, 
-                  Ali Shahriyari, 
-                  <a href="https://gauravbharaj.github.io/">Gaurav Bharaj</a>
-                <br>
-                <em>ECCV</em>, 2024
-                <br>
-                <a href="https://github.com/Reality-Defender/Research-DD-VQA">code</a>
-                /
-                <a href="https://arxiv.org/pdf/2402.00126">arXiv</a>
-              </td>
+                  <tr class="publication">
+                    <td width="40%" valign="middle">
+                      <img class="publication-img" src="images/vln-trans.png">
+                    </td>
+                    <td width="60%" valign="middle">
+                      <a href="https://arxiv.org/pdf/2302.09230.pdf">
+                        <span class="papertitle">VLN-Trans: Translator for the Vision and Language Navigation Agent</span>
+                      </a>
+                      <br>
+                      <strong>Yue Zhang</strong>,  
+                      <a href="https://www.cse.msu.edu/~kordjams/">Parisa Kordjamshidi</a>
+                      <br>
+                      <em>ACL (<span style="color:red; font-weight:bold;">Oral</span>)</em>, 2023
+                      <br>
+                      <a href="https://github.com/HLR/VLN-trans">Code</a> /
+                      <a href="https://arxiv.org/pdf/2302.09230.pdf">ArXiv</a>
+                    </td>
                   </tr>
-                </table>
-              </td>
-            </tr>
 
-
-
-          
-
-
-
-              <tr onmouseout="bog_stop()" onmouseover="bog_start()">
-              <td width="40%" valign="middle" align="left">
-                <div class="one">
-                  <style>
-                        img {
-                            max-width: 150%;
-                            height: auto;
-                        }
-                      /*  @media screen and (max-width: 768px) {
-                            img {
-                                width: 200%;
-                                max-width: 800px;
-                            }
-                        }*/
-                    </style>
-                  <img id="mmdet_img" src='images/navhint.png'>
-                </div>
-              </td>
-              <td width="60%" valign="middle">
-                <!-- Nested table to ensure responsiveness -->
-                <table width="100%">
-                  <tr>
-                   <td style="padding:0px;width:100%;vertical-align:middle">
-              <a href="https://arxiv.org/pdf/2402.02559.pdf">
-                  <span class="papertitle">NavHint: Vision and Language Navigation Agent with a Hint Generator</span>
-                </a>
-                <br>
-                  <strong>Yue Zhang</strong>, 
-                  <a href="https://guoquan.net/">Quan Guo</a>, 
-                  <a href="https://www.cse.msu.edu/~kordjams/">Parisa Kordjamshidi</a>
-                <br>
-                <em>EACL Findings</em>, 2024
-                <br>
-                <a href="https://github.com/HLR/NavHint">code</a>
-                /
-                <a href="https://arxiv.org/pdf/2402.02559.pdf">arXiv</a>
-              </td>
+                  <tr class="publication">
+                    <td width="40%" valign="middle">
+                      <img class="publication-img" src="images/lovis.png">
+                    </td>
+                    <td width="60%" valign="middle">
+                      <a href="https://aclanthology.org/2022.coling-1.505.pdf">
+                        <span class="papertitle">LOViS: Learning Orientation and Visual Signals for Vision and Language Navigation</span>
+                      </a>
+                      <br>
+                      <strong>Yue Zhang</strong>,  
+                      <a href="https://www.cse.msu.edu/~kordjams/">Parisa Kordjamshidi</a>
+                      <br>
+                      <em>COLING (<span style="color:red; font-weight:bold;">Oral</span>)</em>, 2022
+                      <br>
+                      <a href="https://github.com/HLR/LOViS">Code</a> /
+                      <a href="https://aclanthology.org/2022.coling-1.505.pdf">ArXiv</a>
+                    </td>
                   </tr>
-                </table>
-              </td>
-            </tr>
 
-
-              <tr onmouseout="bog_stop()" onmouseover="bog_start()">
-              <td width="40%" valign="middle" align="left">
-                <div class="one">
-                  <style>
-                        img {
-                            max-width: 150%;
-                            height: auto;
-                        }
-                      /*  @media screen and (max-width: 768px) {
-                            img {
-                                width: 200%;
-                                max-width: 800px;
-                            }
-                        }*/
-                    </style>
-                  <img id="mmdet_img" src='images/vln-trans.png'>
-                </div>
-              </td>
-              <td width="60%" valign="middle">
-                <!-- Nested table to ensure responsiveness -->
-                <table width="100%">
-                  <tr>
-                   <td style="padding:0px;width:100%;vertical-align:middle">
-             <a href="https://arxiv.org/pdf/2302.09230.pdf">
-                  <span class="papertitle">VLN-Trans: Translator for the Vision and Language Navigation Agent</span>
-                </a>
-                <br>
-                  <strong>Yue Zhang</strong>,  
-                  <a href="https://www.cse.msu.edu/~kordjams/">Parisa Kordjamshidi</a>
-                <br>
-                <em>ACL (<span style="color:red; font-weight:bold;">Oral</span>)</em>, 2023
-                <br>
-                <a href="https://github.com/HLR/VLN-trans">code</a>
-                /
-                <a href="https://arxiv.org/pdf/2302.09230.pdf">arXiv</a>
-              </td>
+                  <tr class="publication">
+                    <td width="40%" valign="middle">
+                      <img class="publication-img" src="images/srw.png">
+                    </td>
+                    <td width="60%" valign="middle">
+                      <a href="https://aclanthology.org/2022.acl-srw.24">
+                        <span class="papertitle">Explicit Object Relation Alignment for Vision and Language Navigation</span>
+                      </a>
+                      <br>
+                      <strong>Yue Zhang</strong>,  
+                      <a href="https://www.cse.msu.edu/~kordjams/">Parisa Kordjamshidi</a>
+                      <br>
+                      <em>ACL SRW</em>, 2022
+                      <br>
+                      <a href="">Code</a> /
+                      <a href="https://aclanthology.org/2022.acl-srw.24">ArXiv</a>
+                    </td>
                   </tr>
-                </table>
-              </td>
-            </tr>
 
-
-             <tr onmouseout="bog_stop()" onmouseover="bog_start()">
-              <td width="40%" valign="middle" align="left">
-                <div class="one">
-                  <style>
-                        img {
-                            max-width: 150%;
-                            height: auto;
-                        }
-                      /*  @media screen and (max-width: 768px) {
-                            img {
-                                width: 200%;
-                                max-width: 800px;
-                            }
-                        }*/
-                    </style>
-                  <img id="mmdet_img" src='images/lovis.png'>
-                </div>
-              </td>
-              <td width="60%" valign="middle">
-                <!-- Nested table to ensure responsiveness -->
-                <table width="100%">
-                  <tr>
-                   <td style="padding:0px;width:100%;vertical-align:middle">
-             <a href="https://aclanthology.org/2022.coling-1.505.pdf">
-                  <span class="papertitle">LOViS: Learning Orientation and Visual Signals for Vision and Language Navigation</span>
-                </a>
-                <br>
-                  <strong>Yue Zhang</strong>,  
-                  <a href="https://www.cse.msu.edu/~kordjams/">Parisa Kordjamshidi</a>
-                <br>
-                <em>COLING (<span style="color:red; font-weight:bold;">Oral</span>)</em>, 2022
-                <br>
-                <a href="https://github.com/HLR/LOViS">code</a>
-                 /
-                <a href="https://aclanthology.org/2022.coling-1.505.pdf">arXiv</a>
-              </td>
+                  <tr class="publication">
+                    <td width="40%" valign="middle">
+                      <img class="publication-img" src="images/splu.png">
+                    </td>
+                    <td width="60%" valign="middle">
+                      <a href="https://aclanthology.org/2021.splurobonlp-1.5.pdf">
+                        <span class="papertitle">Towards Navigation by Reasoning over Spatial Configurations</span>
+                      </a>
+                      <br>
+                      <strong>Yue Zhang</strong>,  
+                      <a href="https://guoquan.net/">Quan Guo</a>,
+                      <a href="https://www.cse.msu.edu/~kordjams/">Parisa Kordjamshidi</a>
+                      <br>
+                      <em>ACL workshop on SpLU-RoboNLP</em>, 2021
+                      <br>
+                      <a href="">Code</a> /
+                      <a href="https://aclanthology.org/2021.splurobonlp-1.5.pdf">ArXiv</a>
+                    </td>
                   </tr>
-                </table>
-              </td>
-            </tr>
 
 
 
-            <tr onmouseout="bog_stop()" onmouseover="bog_start()">
-              <td width="40%" valign="middle" align="left">
-                <div class="one">
-                  <style>
-                        img {
-                            max-width: 150%;
-                            height: auto;
-                        }
-                      /*  @media screen and (max-width: 768px) {
-                            img {
-                                width: 200%;
-                                max-width: 800px;
-                            }
-                        }*/
-                    </style>
-                  <img id="mmdet_img" src='images/srw.png'>
-                </div>
-              </td>
-              <td width="60%" valign="middle">
-                <!-- Nested table to ensure responsiveness -->
-                <table width="100%">
+                </tbody>
+              </table>
+
+              <!-- Professional Service --> s
+               <h2>Professional Service</h2>
+              <table style="width:100%; margin:auto;">
+                <tbody>
                   <tr>
-                   <td style="padding:0px;width:100%;vertical-align:middle">
-             <a href="https://aclanthology.org/2022.acl-srw.24">
-                  <span class="papertitle">Explicit Object Relation Alignment for Vision and Language Navigation</span>
-                </a>
-                <br>
-                  <strong>Yue Zhang</strong>,  
-                  <a href="https://www.cse.msu.edu/~kordjams/">Parisa Kordjamshidi</a>
-                <br>
-                <em>ACL SRW</em>, 2022
-                <br>
-                <a href="">code</a>
-                 /
-                <a href="https://aclanthology.org/2022.acl-srw.24">arXiv</a>
-              </td>
+                    <td style="padding:5px; width:100%; vertical-align:middle">
+                      <ul>
+                        <li>[2024.7] Co-organizer of <a href="https://splu-robonlp-2024.github.io/">SpLU-RoboNLP @ ACL 2024</a></li>
+                        <li>[2022.11] Invited talk at Sichuan University</li>
+                        <li>Reviewer for ACL, EMNLP, NAACL</li>
+                      </ul>
+                    </td>
                   </tr>
-                </table>
-              </td>
-            </tr>
+                </tbody>
+              </table>
 
-
-
-
-            <tr onmouseout="bog_stop()" onmouseover="bog_start()">
-              <td width="40%" valign="middle" align="left">
-                <div class="one">
-                  <style>
-                        img {
-                            max-width: 150%;
-                            height: auto;
-                        }
-                      /*  @media screen and (max-width: 768px) {
-                            img {
-                                width: 200%;
-                                max-width: 800px;
-                            }
-                        }*/
-                    </style>
-                  <img id="mmdet_img" src='images/splu.png'>
-                </div>
-              </td>
-              <td width="60%" valign="middle">
-                <!-- Nested table to ensure responsiveness -->
-                <table width="100%">
-                  <tr>
-                   <td style="padding:0px;width:100%;vertical-align:middle">
-            <a href="https://aclanthology.org/2021.splurobonlp-1.5.pdf">
-                  <span class="papertitle">Towards Navigation by Reasoning over Spatial Configurations</span>
-                </a>
-                <br>
-                  <strong>Yue Zhang</strong>,  
-                  <a href="https://guoquan.net/">Quan Guo</a>,
-                  <a href="https://www.cse.msu.edu/~kordjams/">Parisa Kordjamshidi</a>
-                <br>
-                <em>ACL workshop on SpLU-RoboNLP</em>, 2021
-                <br>
-                <a href="">code</a>
-                 /
-                <a href="https://aclanthology.org/2021.splurobonlp-1.5.pdf">arXiv</a>
-              </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-        </table>
-
-          <table style="width:100%;border:500px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <h2>Professional Service</h2>
-              <p>
-                <li>[2024.7] Co-organizer of <a href="https://splu-robonlp-2024.github.io/">SpLU-RoboNLP @ ACL 2024</a></li>
-                <li>[2022.11] Invited talk in Sichuan University </li>
-                <li>Reviewers for ACL, EMNLP, NAACL </li>
-              </p>
             </td>
           </tr>
-        </tbody></table>
-
-      </tbody></table>
-
-      
-
-    </tbody></table>
+        </tbody>
+      </table>
   </body>
 </html>
