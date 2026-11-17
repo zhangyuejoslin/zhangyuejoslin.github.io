@@ -26,6 +26,23 @@
             margin-bottom: 20px;
         }
 
+        /* Year dividers in Selected Publications */
+        .year-divider td {
+            padding: 18px 0 6px 0;
+        }
+        .year-divider span {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #999;
+            font-size: 14px;
+        }
+        .year-divider span::after {
+            content: "";
+            flex: 1;
+            border-top: 1px solid #ddd;
+        }
+
         /* Responsive Design */
         @media screen and (max-width: 768px) {
             .publication-img {
@@ -46,7 +63,7 @@
                   <tr>
                     <td style="padding:2.5%; width:63%; vertical-align:middle">
                       <p class="name" style="text-align: center;">Yue Zhang</p>
-                      <p>Hello! I am a postdoctoral research associate in the <a href="https://murgelab.cs.unc.edu/">MURGe-Lab</a> led by <a href="https://www.cs.unc.edu/~mbansal/">Prof. Mohit Bansal</a>, at the  University of North Carolina, Chapel Hill. I earned my Ph.D. at Michigan State University, where I was advised by <a href="https://www.cse.msu.edu/~kordjams/">Prof. Parisa Kordjamshidi</a>. I was a visiting scholar at Virginia Tech, collaborating with <a href="https://wilburone.github.io/index.html">Prof. Lifu Huang</a>. Prior to Ph.D. study, I obtained my master’s degree from Peking University. My <b>research interests</b> include multimodal learning, embodied agents, and spatial reasoning.</p>
+                      <p style="text-align: justify;">Hello! I am a postdoctoral research associate in the <a href="https://murgelab.cs.unc.edu/">MURGe-Lab</a> led by <a href="https://www.cs.unc.edu/~mbansal/">Prof. Mohit Bansal</a>, at the  University of North Carolina, Chapel Hill. I earned my Ph.D. at Michigan State University, where I was advised by <a href="https://www.cse.msu.edu/~kordjams/">Prof. Parisa Kordjamshidi</a>. Prior to Ph.D. study, I obtained my master’s degree from Peking University. My <b>research</b> aims to build spatially intelligent embodied agents that understand their surroundings, reason beyond direct observations using world models, and improve by learning from failure. My work spans spatial and 3D understanding, spatial imagination, and failure-driven learning for embodied agents. I was selected as a <b>Rising Star in AI</b> and invited to give a talk at the <a href="https://ai.engin.umich.edu/events/2026-ai-symposium/">UMich AI Symposium</a> 2026.</p>
                       <p style="text-align:center">
                         <a href="mailto:yuezhan@cs.unc.edu">Email</a> &nbsp;/&nbsp;
                         <a href="https://drive.google.com/file/d/1WM4fdTYuEKZEVnlugPHpj7IZ7yzfgUti/view?usp=sharing">CV</a> &nbsp;/&nbsp;
@@ -69,14 +86,15 @@
                   <tr>
                     <td style="padding:5px 10px; width:100%; vertical-align:middle">
                       <ul class="news-list">
-                        <li>[2026.9] Invited to give a talk at the <a href="https://ai.engin.umich.edu/events/2026-ai-symposium/">UMich AI Symposium</a> as a Rising Star in AI.</li>
+                        <li>[2026.11] SLEuth, an interactive multi-agent system for lupus risk assessment, is accepted to the AAAI 2027 Demo Track!</li>
+                        <li>[2026.11] <a href="https://arxiv.org/abs/2511.17450">SketchVerify</a> is accepted to WACV 2027!</li>
+                        <li>[2026.10] Invited to give a talk at the <a href="https://ai.engin.umich.edu/events/2026-ai-symposium/">UMich AI Symposium</a> as a Rising Star in AI.</li>
                         <li>[2026.9] <a href="https://arxiv.org/abs/2605.14269">PhyMotion</a> and <a href="https://arxiv.org/abs/2602.08236">AViC</a> are accepted to NeurIPS 2026!</li>
                         <li>[2026.7] <a href="https://arxiv.org/abs/2605.09874">EgoMemReason</a> is accepted to COLM 2026!</li>
                         <li>[2026.6] Five papers (<a href="https://arxiv.org/abs/2511.14086">DEER3D</a>, <a href="https://arxiv.org/abs/2602.14941">AnchorWeave</a>, <a href="https://arxiv.org/abs/2603.14659">VisionCoach</a>, <a href="https://arxiv.org/abs/2603.16792">V-Co</a>, and <a href="https://arxiv.org/abs/2606.25306">PQSG</a>) were accepted to ECCV 2026, and <a href="https://arxiv.org/abs/2512.09867">MedForget</a> was accepted to TMLR.</li>
                         <li>[2026.5] EPiC is accepted to ICML 2026!</li>
                         <li>[2026.4] Two papers were accepted to the ACL main, and two papers will appear in CVPR Findings!</li>
                        <!--<li>[2025.11] Please check NEW preprints of <a href="https://arxiv.org/abs/2511.14086">DEER3D </a> and <a href="https://arxiv.org/abs/2511.17450">SketchVerify</a>!</li>-->
-                       <li>[2025.8] Two papers got accepted by EMNLP 2025!</li>
                         <!--<li>[2025.6] Please check NEW preprints of  <a href="https://www.arxiv.org/abs/2506.17113">MEXA</a> and  <a href="https://arxiv.org/abs/2505.21876">EPiC</a>.</li>-->
                         <!-- <li>[2025.4] Officially Joined MURGe-Lab!</li>  -->
                         <!-- <li>[2025.2] One paper got accepted by CVPR 2025 Oral!</li>  -->
@@ -201,6 +219,25 @@
                 <tbody>
                   <!-- Publication 1 -->
 
+                  <tr class="year-divider"><td colspan="2"><span>2027</span></td></tr>
+                  <tr class="publication">
+                    <td width="40%" valign="middle">
+                      <img class="publication-img" src="images/sleuth.png">
+                    </td>
+                    <td width="60%" valign="middle">
+                      <span class="papertitle">SLEuth: An Interactive Multi-Agent System for Lupus Risk Assessment</span>
+                      <br>
+                      <a href="#">Nithin Sivakumaran*</a>,
+                      <strong>Yue Zhang*</strong>,
+                      Marc Niethammer,
+                      Saira Sheikh,
+                      Yueh Z Lee,
+                      <a href="https://www.cs.unc.edu/~mbansal/">Mohit Bansal</a>
+                      <br>
+                      <em>AAAI Demo</em>, 2027
+                    </td>
+                  </tr>
+
                   <tr class="publication">
                      <td width="40%" valign="middle">
                       <img class="publication-img" src="images/verifier_method_website.gif">
@@ -226,6 +263,7 @@
                     </td>
                   </tr>
 
+                  <tr class="year-divider"><td colspan="2"><span>2026</span></td></tr>
                   <tr class="publication">
                     <td width="40%" valign="middle">
                       <video class="publication-img" width="320" height="240" controls autoplay muted loop playsinline>
@@ -597,6 +635,7 @@
 
 
 
+                    <tr class="year-divider"><td colspan="2"><span>2025</span></td></tr>
                     <tr class="publication">
                     <td width="40%" valign="middle">
                       <img class="publication-img" src="images/mexa.png">
@@ -687,6 +726,7 @@
                     </td>
                   </tr>
 
+                  <tr class="year-divider"><td colspan="2"><span>2024</span></td></tr>
                   <tr class="publication">
                     <td width="40%" valign="middle">
                       <img class="publication-img" src="images/vln-survey.jpg">
@@ -772,6 +812,7 @@
                     </td>
                   </tr>
 
+                  <tr class="year-divider"><td colspan="2"><span>2023</span></td></tr>
                   <tr class="publication">
                     <td width="40%" valign="middle">
                       <img class="publication-img" src="images/vln-trans.png">
@@ -791,6 +832,7 @@
                     </td>
                   </tr>
 
+                  <tr class="year-divider"><td colspan="2"><span>2022</span></td></tr>
                   <tr class="publication">
                     <td width="40%" valign="middle">
                       <img class="publication-img" src="images/lovis.png">
@@ -829,6 +871,7 @@
                     </td>
                   </tr>
 
+                  <tr class="year-divider"><td colspan="2"><span>2021</span></td></tr>
                   <tr class="publication">
                     <td width="40%" valign="middle">
                       <img class="publication-img" src="images/splu.png">
